@@ -36,6 +36,11 @@ h2 { font-size: 1.5rem; color: var(--primary-color); margin-bottom: 20px; font-w
 h3 { font-size: 2rem; margin-bottom: 30px; color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px;}
 p { margin-bottom: 15px; color: var(--text-gray); }
 
+/* Alinha o texto da seção Sobre Mim à esquerda */
+#sobre p {
+    text-align: justify;
+}
+
 /* --- Hero Section (Capa) --- */
 .hero {
     height: 100vh; /* Ocupa a tela inteira */
@@ -179,4 +184,49 @@ footer { padding: 50px 0; background-color: #0a0a0a; text-align: center; border-
     .hero { text-align: center; padding: 0 20px; }
     .btn { display: block; margin: 15px auto; width: 100%; }
     .card { text-align: center; } /* Centraliza texto dos cards no celular */
+}
+
+/* --- Estilo da Seção Sobre Mim com Foto --- */
+
+/* Cria o layout lado a lado (Flexbox) */
+.sobre-content {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    gap: 50px; /* Espaço entre a foto e o texto */
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+/* Configuração da Foto */
+.foto-perfil {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: top; /* <--- ADICIONE ESSA LINHA (Isso fixa a cabeça no topo) */
+    border-radius: 15px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.2);
+}
+
+/* Ajuste do Texto */
+.texto-sobre {
+    max-width: 600px;
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 768px) {
+    .sobre-content {
+        flex-direction: column; /* Coloca um em cima do outro no celular */
+        text-align: center; /* Centraliza tudo no celular */
+    }
+
+    .foto-perfil {
+        width: 250px; /* Foto um pouco menor no celular */
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .texto-sobre p {
+        text-align: justify; /* Texto justificado no celular fica melhor de ler */
+    }
 }
