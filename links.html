@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links | Pedro Emanuel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos específicos apenas para esta página de links */
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('perfil.jpg'); /* Fundo com sua foto desfocada/escura */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .links-container {
+            width: 100%;
+            max-width: 400px; /* Largura típica de celular */
+            padding: 30px;
+            text-align: center;
+            background: rgba(18, 18, 18, 0.8); /* Fundo semi-transparente */
+            border-radius: 15px;
+            border: 1px solid #333;
+            backdrop-filter: blur(10px); /* Efeito de desfoque moderno */
+        }
+
+        .foto-links {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color); /* Seu verde neon */
+            object-fit: cover;
+            margin-bottom: 15px;
+            object-position: top; /* Ajuste para o rosto */
+        }
+
+        .links-container h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .links-container p {
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        /* Botões Estilo "LinkTree" */
+        .btn-link {
+            display: block; /* Botão ocupa a linha toda */
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px; /* Borda redonda */
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-link:hover {
+            background: var(--primary-color);
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(0, 230, 118, 0.4);
+        }
+
+        .btn-destaque {
+            background: var(--primary-color);
+            color: #000;
+        }
+        
+        /* Ícones dentro dos botões */
+        .btn-link i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="links-container">
+        <img src="perfil.jpg" alt="Pedro Emanuel" class="foto-links">
+        
+        <h2>Pedro Emanuel</h2>
+        <p>Técnico em TI & Desenvolvedor Web</p>
+
+        <a href="https://wa.me/5584998131476?text=Ol%C3%A1%2C%20vi%20seu%20Instagram%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" class="btn-link btn-destaque">
+            <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+        </a>
+
+        <a href="index.html" class="btn-link">
+            <i class="fas fa-globe"></i> Meu Portfólio Completo
+        </a>
+
+        <a href="curriculo.pdf" download="Curriculo_Pedro_Emanuel.pdf" class="btn-link">
+            <i class="fas fa-file-pdf"></i> Ver Currículo (PDF)
+        </a>
+
+        <div class="social-links" style="margin-top: 20px;">
+            <a href="https://github.com/emanuel-emuh" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/Emanuel Gurgel" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:emanuel7p7@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>
